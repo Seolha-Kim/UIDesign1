@@ -5,6 +5,30 @@
 <head>
   <title>[your name] | UI Design Programming 1</title>
   <meta charset="utf-8" />
+      <title>ASCII 집</title>
+    <style>
+        body {
+            display: flex;
+            font-family: monospace;
+        }
+        .house-container {
+            white-space: pre;
+            font-size: 16px;
+            line-height: 1.2;
+            cursor: pointer;
+        }
+        .door {
+            color: red;
+            font-weight: bold;
+        }
+        .house-inside {
+            display: none; /* 처음에는 숨김 */
+            margin-left: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,8 +73,43 @@
     \|/    \|\\|//o/    |  ______ .      .    .|
      |      \o\|//      |  |  | |     ======   |
      |        \|/o      | .|  | |    *|    |*  |
-     |         |        |  ======   . |   @|   |
+     |         |        |  ======   . |   <span class="door" id="door">@</span>|   |
 o_\o/|_|_\|/o_\|/_o._|o_|_________.___|____|__.|_
 </pre>
+    </div>
+
+    <!-- 내부 표시 -->
+    <div class="house-inside" id="houseInside">
+        <h2>
+.    *        .        .      .        .     
+    *.   *          .     *      *      *    .
+ .  .       *        .  *      .       .  *   .
+      _ +,, +-.._  .        *    _ v __
+  *  /░.       .░|    _  _  ///-\\\\   . *
+    /░|  Q  Q   ░░\   /` \/ `\ ||^  ^  ||.  
+ *  |_(  _@__   )_░\  \      / {|O  O  |])  * . 
+  .   /          \     '.  .'  || (  * ||  .
+     (. ) ())  ())░      \/    | \ -  / |
+     (   ).   ()▄)░░     ▄     || |  | ||
+      ░░░ ----░░░ ░░░░▄▄▀       ░░░  ░░░░░
+    .░░░    .░░░. ░░░░░ . . .  ░░░░░░░░░░░
+
+ .-.-. .-.-. .-.-. .-.-.      .-.-. .-.-. .-.-. 
+( m .'( i .'( n .'( i .'.-.-.( & .'( m .'( e .' 
+ `.(   `.(   `.(   `.(  '._.' '.(   `.(   `.(   
+                            +-+-+-+-+-+-+-+-+-+
+- *_* *. *-))()* - -. _*( - |s|e|o|l|h|a|K|i|m|
+----------------------------+-+-+-+-+-+-+-+-+-+
+        </h2>
+        <p> 웰컴투 마이 홈. 디스 이즈 미니. 마이 독. 마이 럽. 마이 라잎. 🏠✨</p>
+    </div>
+
+    <script>
+        // 문고리(@) 클릭 시 내부 표시
+        document.getElementById("door").addEventListener("click", function() {
+            var inside = document.getElementById("houseInside");
+            inside.style.display = inside.style.display === "block" ? "none" : "block";
+        });
+    </script>
 </body>
 </html>
