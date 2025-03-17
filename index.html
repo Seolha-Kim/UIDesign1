@@ -13,6 +13,7 @@
             padding: 45pt;
         }
         body {
+
            display: flex;
            flex-direction: column;
            align-items: center;
@@ -24,10 +25,16 @@
             line-height: 1.2;
             cursor: pointer;
         }
+        @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
         .door {
             color: forestgreen;
             font-weight: bold;
             cursor: pointer;
+            animation: blink 1s infinite; /* 1초마다 반복 */
         }
         .house-inside {
             display: none; /* 처음에는 숨김 */
@@ -65,7 +72,12 @@
     </div>
   </div>
 
-
+    <script>
+        document.getElementById("door").addEventListener("click", function() {
+            var inside = document.getElementById("houseInside");
+            inside.classList.toggle("show"); // 내부가 나타나고 사라지는 효과
+        });
+    </script>
 
 <pre>
   
