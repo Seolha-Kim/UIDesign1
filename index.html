@@ -8,7 +8,9 @@
       <title>ASCII 집</title>
     <style>
         body {
-            display: flex;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
             font-family: monospace;
         }
         .house-container {
@@ -18,7 +20,7 @@
             cursor: pointer;
         }
         .door {
-            color: red;
+            color: forestgreen;
             font-weight: bold;
         }
         .house-inside {
@@ -80,7 +82,7 @@ o_\o/|_|_\|/o_\|/_o._|o_|_________.___|____|__.|_
 
     <!-- 내부 표시 -->
     <div class="house-inside" id="houseInside">
-        <h2>
+        <pre>
 .    *        .        .      .        .     
     *.   *          .     *      *      *    .
  .  .       *        .  *      .       .  *   .
@@ -100,7 +102,7 @@ o_\o/|_|_\|/o_\|/_o._|o_|_________.___|____|__.|_
                             +-+-+-+-+-+-+-+-+-+
 - *_* *. *-))()* - -. _*( - |s|e|o|l|h|a|K|i|m|
 ----------------------------+-+-+-+-+-+-+-+-+-+
-        </h2>
+        </pre>
         <p> 웰컴투 마이 홈. 디스 이즈 미니. 마이 독. 마이 럽. 마이 라잎. 🏠✨</p>
     </div>
 
