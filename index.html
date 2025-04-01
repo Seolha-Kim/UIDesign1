@@ -3,24 +3,37 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
   <title>[your name] | UI Design Programming 1</title>
   <meta charset="utf-8" />
       <title>ASCII 집</title>
     <style>
 
-        h1{
+            body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+      background-image: url('https://i.pinimg.com/736x/49/47/2c/49472c38bb67e477a2daa0239f8b9584.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    }
 
-            font-size: 22pt;
-            text-align: center;
-            padding: 45pt;
-        }
-        body {
-
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-            font-family: monospace;
-        }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32pt;
+    text-align: center;
+    padding: 30pt;
+    color: forestgreen;
+    letter-spacing: 1px;
+  }
         .house-container {
             white-space: pre;
             font-size: 16px;
@@ -38,19 +51,49 @@
             cursor: pointer;
             animation: blink 1s infinite; /* 1초마다 반복 */
         }
-        .house-inside {
+.house-inside {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+background-color: #1e1e2f; /* ← 요기! */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  animation: fadein 1s;
+}
 
-            display: none; /* 처음에는 숨김 */
-            margin-left: 20px;
-            padding: 10px;
-            border: 1px solid #000;
-            background-color: lightyellow;
-        }
-        .div {
-            background-color: lightyellow;
-            background-blend-mode: soft-light;
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+         .desc, ul, p {
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      margin: 10px auto;
+      text-align: center;
+    }
 
-        }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+
+    a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {color:white;}
+
     </style>
 </head>
 
