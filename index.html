@@ -28,11 +28,12 @@
 
   h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 32pt;
+    font-size: 34pt;
     text-align: center;
     padding: 30pt;
     color: forestgreen;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 3px deeppink;
   }
         .house-container {
             white-space: pre;
@@ -94,6 +95,19 @@ background-color: #1e1e2f; /* ← 요기! */
     }
     pre {color:white;}
 
+    button { 
+
+    width: 90px;
+    margin-left: 280px;
+    margin-bottom: 25px;
+    height: 28px;
+    background-color: lightgreen;
+    contents-align: center;}
+
+    .mybutton {
+       padding-left: 500px;
+    }
+
     </style>
 </head>
 
@@ -108,6 +122,7 @@ background-color: #1e1e2f; /* ← 요기! */
 
       <!-- about me-->
       <h1>[Seolha Kim]</h1>  
+      <button id="mybutton">Click Me!</button>
       <p class="desc">Hi I'm seolha Kim, a student of SNU. 
       I'm studying Visual design here and my favorite part is video art. Nice to meet you. </p>
       <p> ig : @snowa_ter</p>
@@ -133,6 +148,7 @@ background-color: #1e1e2f; /* ← 요기! */
             inside.classList.toggle("show"); // 내부가 나타나고 사라지는 효과
         });
     </script>
+
 
 <pre>
   
@@ -185,6 +201,26 @@ o_\o/|_|_\|/o_\|/_o._|o_|_________.___|____|__.|_
             var inside = document.getElementById("houseInside");
             inside.style.display = inside.style.display === "block" ? "none" : "block";
         });
+    </script>
+
+    <script>
+    document.getElementById('mybutton').addEventListener('click', function() {
+alert('light on!');
+});
+
+const images = [
+  "url('https://i.pinimg.com/736x/49/47/2c/49472c38bb67e477a2daa0239f8b9584.jpg')",
+  "url('https://i.pinimg.com/736x/f6/6c/84/f66c845f4b4f91f36b39eb3c894aab56.jpg')",
+  "url('https://i.pinimg.com/736x/f6/6c/84/f66c845f4b4f91f36b39eb3c894aab56.jpg')"
+];
+let current = 0;
+
+document.getElementById('mybutton').addEventListener('click', function() {
+  current = (current + 1) % images.length;
+  document.body.style.backgroundImage = images[current];
+});
+
+
     </script>
 </body>
 </html>
